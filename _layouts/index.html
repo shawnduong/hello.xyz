@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+	{% include navbar.html %}
+
+	<div id="banner" style="background-image: url({{ page.banner }})">
+		<div id="banner-contents">
+			<div id="banner-text" style="width: {{ page.title | size | plus: 6 }}ch">
+				&gt; <span class="typed"></span>
+			</div>
+			<br>
+			<br>
+			<img id="portrait" src="{{ site.baseurl }}/assets/img/site/portrait.jpg"/>
+		</div>
+	</div>
+
+	<div id="main" style="min-height: 100vh">
+
+		{{ content }}
+
+	</div>
+
+	{% include footer.html %}
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/typed.min.js"></script>
+
+	<script>
+
+		var quotes = new Array();
+		quotes.push("Quote 1");
+		quotes.push("Quote 2");
+		quotes.push("Quote 3");
+		quotes.push("Quote 4");
+		quotes.push("Quote 5");
+
+		$(".typed").typed({
+			strings: quotes,
+			typeSpeed: 20,
+			backSpeed: 40,
+			startDelay: 1000,
+			backDelay: 1000,
+			loop: true,
+			loopCount: false,
+			cursorChar: "_"
+		});
+
+	</script>
+
+</body>
+
+</html>

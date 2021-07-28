@@ -1,0 +1,187 @@
+:root {
+	/* Color variables. */
+
+	/* For Christmas
+	--back-color: #000000;
+	--balt-color: #303030;
+	--head-color: #5AC685;
+	--link-color: #FB5B5A;
+	--text-color: #C9F3EA;
+	*/
+
+	/* Retro Theme Dark */
+	--back-color: #0F0F0F;
+	--balt-color: #3F3F3F;
+	--head-color: #E6E6E6;
+	--link-color: #C5A880;
+	--text-color: #E6E6E6;
+
+	/* Positioning variables */
+	--banner-height: 80px;
+	--padding-large: 48px;
+	--padding-small: 24px;
+	--padding-tiny: 12px;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("/assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+	font-family: Source;
+	src: url("/assets/fonts/SourceCodePro-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--back-color);
+	color: var(--text-color);
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	height: 100%;
+	line-height: 1.6;
+	opacity: 0;
+	transition: 0.125s;
+}
+
+a {
+	color: var(--link-color);
+	text-shadow: 1px 1px 15px var(--link-color);
+}
+
+h1, h1 a, h2, h3, h4, h5 {
+	color: var(--head-color);
+	text-decoration: none;
+	text-shadow: 1px 1px 15px var(--head-color);
+}
+
+blockquote {
+	background-color: var(--balt-color);
+	border-left: 4px solid var(--link-color);
+	margin: 2% 2%;
+	padding: 20px 20px 0px 20px;
+}
+
+#banner {
+	border-bottom: 1px dashed white;
+	height: var(--banner-height);
+}
+
+#banner h1 {
+	font-family: Source;
+	font-size: 24px;
+	padding-top: 6px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#banner h2 {
+	font-family: Source;
+	font-size: 16px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#listing {
+	list-style: none;
+	padding-bottom: var(--padding-small); 
+}
+
+#listing p {
+	padding-top: var(--padding-tiny);
+}
+
+#listing-archive {
+	font-family: Source;
+	list-style: none;
+	padding-bottom: var(--padding-small);
+	padding-top: var(--padding-small);
+}
+
+#main {
+	font-size: 18px;
+	padding-top: var(--padding-large);
+	padding-bottom: var(--padding-large);
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: justify;
+}
+
+#main img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#main mjx-container {
+	margin-top: calc(var(--padding-small) * -1 + 1em);
+}
+
+#main p {
+	padding-bottom: var(--padding-small);
+}
+
+#main table {
+	border: 1px solid white;
+	border-collapse: collapse;
+	border-spacing: 4px;
+	font-size: 18px;
+	margin-bottom: var(--padding-small);
+	min-width: 67%;
+}
+
+#main table th, #main table td {
+	border: 1px solid white;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#pager {
+	font-family: Source;
+	padding-bottom: var(--padding-small);
+}
+
+#pager a {
+	text-decoration: none;
+}
+
+#post h2, #post h3 {
+	padding-bottom: var(--padding-small);
+}
+
+#post p {
+	padding-bottom: var(--padding-small);
+}
+
+#post ul, #post ol {
+	font-size: 18px;
+	padding-left: var(--padding-large);
+	padding-bottom: var(--padding-small);
+}
+
+#post ul ul {
+	padding-left: var(--padding-small);
+	padding-bottom: 0;
+}
+
+.blink {
+	animation: blinking 1.5s infinite
+}
+
+@keyframes blinking {
+	0%  { opacity: 100%; }
+	40% { opacity: 100%; }
+	50% { opacity:   0%; }
+	90% { opacity:   0%; }
+}
+
+@media screen and (max-width: 600px) {
+	* {
+		text-align: left;
+	}
+}

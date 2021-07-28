@@ -1,0 +1,29 @@
+# Basic information.
+title: John Doe
+blog: "john@home:~/blog"
+domain: hello.xyz
+description: Lorem ipsum dolor sit amet.
+baseurl: ""
+
+# Contact information.
+email: john.doe@example.com
+twitter: johndoe
+github: johndoe
+
+# Collections.
+collections:
+  learn:
+    output: true
+    permalink: /:collection/:title
+  projects:
+    output: true
+    permalink: /:collection/:title
+
+# Paginator setup.
+permalink: /blog/:year-:month-:day/:title
+paginate: 5
+paginate_path: /blog/:num
+
+# Plugins.
+plugins:
+  - jekyll-paginate

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+	{% include navbar.html %}
+
+	<div id="main">
+
+		{{ content }}
+
+		<ul id="contentlist">
+
+		{% for project in site.projects %}
+
+			<li style="background-image: url({{ project.banner }})">
+				<a id="contentlist-contents" href="{{ project.url }}">{{ project.title }}</a>
+			</li>
+
+		{% endfor %}
+
+		<ul>
+
+	</div>
+
+	{% include footer.html %}
+
+</body>
+
+</html>
